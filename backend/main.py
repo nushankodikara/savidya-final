@@ -8,7 +8,7 @@ from PIL import Image
 
 # --- Configuration & Model Loading ---
 
-MODEL_PATH = '../cnn.h5' # Assuming model is in the root, one level up
+MODEL_PATH = 'cnn.h5' # Assuming model is in the root, one level up
 IMAGE_WIDTH = 200
 IMAGE_HEIGHT = 200
 
@@ -43,17 +43,19 @@ app = FastAPI(title="Face Shape Prediction API")
 
 # Configure CORS
 origins = [
-    "http://localhost:3000",  # Default React dev server port
-    "http://localhost:3001",  # Alternative React dev port
-    # Add any other origins if needed (e.g., your deployed frontend URL)
+    "http://localhost",  # Frontend running on port 80
+    "http://localhost:80",
+    "http://localhost:3000",  # For development
+    "http://localhost:8000",  # For development
+    "*"  # Allow all origins for now (you should restrict this in production)
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"], # Allows all methods
-    allow_headers=["*"], # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # --- Helper Functions ---

@@ -158,7 +158,7 @@ export default function PredictPage() {
   return (
     <main className="container mx-auto p-4 md:p-8">
       <h1 className="scroll-m-20 text-3xl font-bold tracking-tight lg:text-4xl mb-8 text-center">
-        Glasses Recommendation
+        Glasses / Shades Recommendation
       </h1>
 
       <Card className="mb-8">

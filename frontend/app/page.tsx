@@ -12,7 +12,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl mb-4">
-            Find Your Perfect Glasses Fit
+            Find Your Perfect Glasses / Shades
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Stop guessing! Upload a photo or use your webcam, and let our AI analyze
